@@ -368,8 +368,16 @@ fi
 if [ "$DRY_RUN" = 1 ]; then
   warn "(dry-run) merge kwinrc"
 else
-  kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library org.kde.breeze
-  kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme   Breeze
+  # Dekorasi jendela: pakai Aurorae WhiteSur-dark (gaya macOS), BUKAN Breeze.
+  # Kalau tema Aurorae-nya belum ada, jangan dipaksa — biar Plasma pakai default.
+  if [ -d "$HOME/.local/share/aurorae/themes/WhiteSur-dark" ] \
+     || [ -d "/usr/share/aurorae/themes/WhiteSur-dark" ]; then
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library org.kde.kwin.aurorae.v2
+    kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme   __aurorae__svg__WhiteSur-dark
+    ok "Dekorasi jendela: Aurorae WhiteSur-dark"
+  else
+    warn "Tema Aurorae 'WhiteSur-dark' belum terpasang — dekorasi jendela dibiarkan apa adanya."
+  fi
   kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft XIA
   kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight ""
   kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key NoPlugin false

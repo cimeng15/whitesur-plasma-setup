@@ -77,6 +77,14 @@ Lalu logout/login.
   kursor yang ditulis. Konfigurasi touchpad/device Anda tetap aman.
 - **Susunan panel akan diganti** jika `--no-layout` tidak dipakai. Pakai
   `--no-layout` bila ingin mempertahankan panel yang sudah ada.
+- **Config di `config/` adalah salinan bersih, bukan config asli mesin
+  pengembang.** Beberapa nilai kustom (mis. `ColorSchemeHash`,
+  `LookAndFeelPackage`, `accentColorFromWallpaper`) sengaja diseragamkan.
+  Kalau di laptop lain Anda punya kustomisasi sendiri, backup dulu
+  (`./install.sh --dry-run` lalu `--no-layout`) dan bandingkan dengan
+  `~/.local/state/whitesur-plasma-setup/backups/`.
+- **Dekorasi jendela** memakai Aurorae `WhiteSur-dark`. Bila tema itu belum
+  terpasang, installer tidak memaksanya dan hanya memberi peringatan.
 - Diuji pada Plasma 6 / CachyOS. Di distro Arch lain sebagian besar jalan,
   tapi nama wallpaper CachyOS akan dilewati bila tidak ada.
 - Tema diunduh langsung dari upstream (Vinceliuice / zayronxio), jadi repo ini

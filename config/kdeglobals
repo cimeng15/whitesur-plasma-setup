@@ -148,6 +148,7 @@ Theme=Mkos-Big-Sur-Night
 
 [KDE]
 AnimationDurationFactor=0.25
+LookAndFeelPackage=Apple.Ventura.Dark.P6
 contrast=4
 frameContrast=0.2
 widgetStyle=Breeze
