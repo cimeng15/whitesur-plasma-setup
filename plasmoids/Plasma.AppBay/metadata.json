@@ -1,0 +1,25 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "adolfo@librepixels.com",
+                "Name": "zayronxio"
+            }
+        ],
+        "Name": "AppBay",
+        "Id": "Plasma.AppBay",
+        "Description": "application launcher that replicates a macOS launchpad",
+        "Category": "Utilities",
+        "Icon": "start-here-kde",
+        "EnabledByDefault": true,
+        "License": "GPL-3.0+",
+        "ServiceTypes": [
+            "Plasma/Applet"
+        ],
+        "Version": "0.2.7",
+        "Website": "https://www.pling.com/p/2327339/"
+    },
+    "X-Plasma-Provides": [ "org.kde.plasma.launchermenu" ],
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

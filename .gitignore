@@ -1,0 +1,11 @@
+# Cache / log
+*.log
+
+# File sementara
+*.bak
+*.orig
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db

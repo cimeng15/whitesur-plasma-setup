@@ -1,0 +1,6 @@
+# Perangkat keras (touchpad, keyboard) BERBEDA-beda per laptop.
+# File ini sengaja hanya berisi setting kursor. Installer akan MENGGABUNGKAN
+# (merge), bukan menimpa, supaya setting touchpad di laptop Anda tetap aman.
+[Mouse]
+cursorTheme=WhiteSur-cursors
+cursorSize=24
